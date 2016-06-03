@@ -31,8 +31,8 @@
         success: function (data) {
             if (data) {
               var toRet = [];
-              var p4=data.indexOf("<script>")+8;
-              var e1=data.indexOf("</script>",p4);
+              var p4=data.indexOf("<script>")+8;//<!--
+              var e1=data.indexOf("</script>",p4);//-->
               //eval(data.substring(p4,e1)); //hahahahah wut is security amiright?
               console.log(average180);
               for (var i=0;i<average180.length;i+=1) {
