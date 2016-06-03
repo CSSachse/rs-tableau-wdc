@@ -55,7 +55,7 @@
         error: function (xhr, ajaxOptions, thrownError) {
           // add something to the log and return an empty set if there was problem with the connection
           tableau.log("connection error: " + xhr.responseText + "\n" + thrownError);
-          tableau.abortWithError("error connecting to data source");
+          tableau.abortWithError("connection error: " + xhr.responseText + "\n" + thrownError);
         }
     });
   };
