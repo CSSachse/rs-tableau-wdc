@@ -4,6 +4,7 @@
 <title>RS Financial Data</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
 <script src="https://connectors.tableau.com/libs/tableauwdc-1.1.1.js" type="text/javascript"></script>
+<script src="https://raw.githubusercontent.com/pyronicide/janky.post/master/lib/janky.post.min.js" type="text/javascript"></script>
 <script type="text/javascript">
  (function() {
 
@@ -28,6 +29,7 @@
     var xhr = $.ajax({
         url: connectionUrl,
         method:'GET',
+        dataType='jsonp',
         success: function (data) {
             if (data) {
               var toRet = [];
